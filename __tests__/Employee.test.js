@@ -16,6 +16,6 @@ describe("Employee", () => {
   })
   it('should have a role', () => {
     const employee = new Employee('Royale', 1, 'royale@email.com');
-    expect(employee.getRole).toEqual('Employee');
+    expect(employee.getRole()).toEqual('Employee');
   })
 });
