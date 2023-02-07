@@ -6,4 +6,8 @@ describe("Engineer", () => {
     const engineer = new Engineer('Royale', 1, 'royale@email.com', 'kiDev' );
     expect(engineer.getGitHub).toEqual('kiDev'); 
   })
+  it('should have a role', () => {
+    const engineer = new Engineer('Royale', 1, 'royale@email.com', 'kiDev');
+    expect(engineer.getRole).toEqual('Engineer');
+  })
 });
