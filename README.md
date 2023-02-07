@@ -16,11 +16,15 @@
   
 ## Installation 
 
-blah blah blah...
+    npm install
+
+    npm i inquirer 8.2.4
+    
+    npm run test
 
 ## Visual
   
-* [Demo Video]()
+* [Demo Video](https://drive.google.com/file/d/1quvdI4ZQkRzucWxtupqw6CCuICCyw-fT/view)
   
 ## Contributing 
   

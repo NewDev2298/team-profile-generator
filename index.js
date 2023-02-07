@@ -99,9 +99,10 @@ prompt(managerQuestions).then(({ name, id, email, officeNumber }) => {
         if (addEmployee) {
             console.log('CONTINUE');
         } else {
-            console.log('Have a good day!');
+            console.log('Have a good day!');   
         }
-    })
+
+    }) 
     .then(() => {
         return prompt({
             type: 'rawlist',
@@ -129,7 +130,7 @@ prompt(managerQuestions).then(({ name, id, email, officeNumber }) => {
 
         }
     })
-    
+
     .then((data) => {
         teamMem.push(data)
     });
