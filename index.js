@@ -9,7 +9,7 @@ const Intern = require('./lib/Intern');
 const prompt = inquirer.createPromptModule();
 const teamMem = [];
 
-prompt([
+const managerQuestions = [
     {
         message: 'Please add name of manager.',
         name: 'name',
@@ -26,7 +26,9 @@ prompt([
         message: 'What is the manager\'s office number?',
         name: 'officeNumber',
     },
-]).then(({name, id, email, officeNumber}) => {
+    ];
+
+prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
     const manager = new Manager(name, id, email, officeNumber);
     teamMem.push(manager);
 });
