@@ -19,7 +19,7 @@ const managerQuestions = [
         default: 'Terrance'
     },
     {
-        message:'What is the manager\'s id number?' ,
+        message: 'What is the manager\'s id number?',
         name: 'id',
         default: 4842
     },
@@ -43,7 +43,7 @@ const engineerQuestions = [
         default: 'Quisha'
     },
     {
-        message:'What is the engineer\'s id number?' ,
+        message: 'What is the engineer\'s id number?',
         name: 'id',
         default: 1021
     },
@@ -58,7 +58,7 @@ const engineerQuestions = [
         default: 'lalli'
     },
 ];
-    
+
 
 const internQuestions = [
     {
@@ -67,7 +67,7 @@ const internQuestions = [
         default: 'Mel'
     },
     {
-        message:'What is the intern\'s id number?' ,
+        message: 'What is the intern\'s id number?',
         name: 'id',
         default: 072
     },
@@ -84,7 +84,7 @@ const internQuestions = [
 ];
 
 
-prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
+prompt(managerQuestions).then(({ name, id, email, officeNumber }) => {
     const manager = new Manager(name, id, email, officeNumber);
     teamMem.push(manager);
 })
@@ -94,14 +94,14 @@ prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
             type: 'confirm',
             name: 'addEmployee',
         })
-})
-    .then(({addEmployee}) => {
+    })
+    .then(({ addEmployee }) => {
         if (addEmployee) {
             console.log('CONTINUE');
         } else {
             console.log('Have a good day!');
         }
-})
+    })
     .then(() => {
         return prompt({
             type: 'rawlist',
@@ -110,13 +110,13 @@ prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
                 'Manager',
                 'Engineer',
                 'Intern'
-             ],
+            ],
             name: 'type'
         })
-}) 
+    })
 
-    .then(({type}) => {
-        switch(type) {
+    .then(({ type }) => {
+        switch (type) {
             case 'Manager': {
                 return prompt(managerQuestions);
             }
@@ -128,5 +128,8 @@ prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
             }
 
         }
-        
-});
+    })
+    
+    .then((data) => {
+        teamMem.push(data)
+    });
