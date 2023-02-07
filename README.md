@@ -1,43 +1,35 @@
-# team-profile-generator
+# Team Profile Generator
 
 ## Description
 
-lorem ipsum....
+    This is an team profile generator used to create a page that allows the user to manage and update descriptions of the employees of a company.It was created using a number of frameworks including: Node.js and Javascript.
 
 ## Table of Contents
   
-[Installation](#installation)
-
-[Usage](#usage)
-
 [License](#license)
 
 [Contributing](#contributing)
 
-[Tests](#tests)
+[Visual](#visual)
 
-[Questions](#questions)
+[Authors & Acknowledgement](#authors-&-acknowledgment)
   
 ## Installation 
 
 blah blah blah...
+
+## Visual
   
-## Usage
-
-filler content..filler content...
+* [Demo Video]()
   
-## License
-
-coming soon...
-
 ## Contributing 
-
-just me :)
-
-## Tests 
   
-......
+    Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Questions
+    Please make sure to update tests as appropriate. 
 
-N/A
+## Authors & Acknowledgement
+
+    For any questions please feel free to reach out through the accounts listed below:
+
+* Terrance Smith - [NewDev2298](https://github.com/NewDev2298)
