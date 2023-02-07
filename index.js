@@ -4,6 +4,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const { type } = require('os');
 
 // Instructor assisted with prompt code
 const prompt = inquirer.createPromptModule();
@@ -86,8 +87,44 @@ prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
     teamMem.push(manager);
 })
     .then(() => {
-        prompt({
-            message: 'Would you like '
+        return prompt({
+            message: 'Would you like to add another employee?',
+            type: 'confirm',
+            name: 'addEmployee',
         })
-    })
+})
+    .then(({addEmployee}) => {
+        if (addEmployee) {
+            console.log('CONTINUE');
+        } else {
+            console.log('WRITE FILE');
+        }
+})
+    .then(() => {
+        return prompt({
+            type: 'rawlist',
+            message: 'What type of employee would you like to add?',
+            choices: [
+                'Manager',
+                'Engineer',
+                'Intern'
+             ],
+            name: 'type'
+        })
+}) 
 
+    .then(({type}) => {
+        switch(type) {
+            case 'Manager': {
+
+            }
+            case 'Engineer': {
+
+            }
+            case 'Intern': {
+                
+            }
+
+        }
+        
+});
