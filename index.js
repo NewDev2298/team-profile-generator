@@ -7,6 +7,7 @@ const Intern = require('./lib/Intern');
 const { type } = require('os');
 
 // Instructor assisted with prompt code
+
 const prompt = inquirer.createPromptModule();
 const teamMem = [];
 
@@ -97,7 +98,7 @@ prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
         if (addEmployee) {
             console.log('CONTINUE');
         } else {
-            console.log('WRITE FILE');
+            console.log('Have a good day!');
         }
 })
     .then(() => {
@@ -116,13 +117,13 @@ prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
     .then(({type}) => {
         switch(type) {
             case 'Manager': {
-
+                return prompt(managerQuestions);
             }
             case 'Engineer': {
-
+                return prompt(engineerQuestions);
             }
             case 'Intern': {
-                
+                return prompt(internQuestions);
             }
 
         }
