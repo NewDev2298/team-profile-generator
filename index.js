@@ -28,6 +28,47 @@ const managerQuestions = [
     },
     ];
 
+
+const engineerQuestions = [
+    {
+        message: 'Please add name of engineer.',
+        name: 'name',
+    },
+    {
+        message:'What is the engineer\'s id number?' ,
+        name: 'id',
+    },
+    {
+        message: 'What is the engineer\'s email address?',
+        name: 'email',
+    },
+    {
+        message: 'What is the engineer\'s GitHub name?',
+        name: 'gitHub',
+    },
+    ];
+    
+
+const internQuestions = [
+    {
+        message: 'Please add name of intern.',
+        name: 'name',
+    },
+    {
+        message:'What is the intern\'s id number?' ,
+        name: 'id',
+    },
+    {
+        message: 'What is the intern\'s email address?',
+        name: 'email',
+    },
+    {
+        message: 'What is the intern\'s school?',
+        name: 'school',
+    },
+    ];
+
+
 prompt (managerQuestions).then(({name, id, email, officeNumber}) => {
     const manager = new Manager(name, id, email, officeNumber);
     teamMem.push(manager);
